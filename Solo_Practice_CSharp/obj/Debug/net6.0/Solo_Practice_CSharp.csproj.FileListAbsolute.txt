@@ -1,0 +1,15 @@
+C:\basicCsharp\Solo_Practice_CSharp\bin\Debug\net6.0\Solo_Practice_CSharp.exe
+C:\basicCsharp\Solo_Practice_CSharp\bin\Debug\net6.0\Solo_Practice_CSharp.deps.json
+C:\basicCsharp\Solo_Practice_CSharp\bin\Debug\net6.0\Solo_Practice_CSharp.runtimeconfig.json
+C:\basicCsharp\Solo_Practice_CSharp\bin\Debug\net6.0\Solo_Practice_CSharp.dll
+C:\basicCsharp\Solo_Practice_CSharp\bin\Debug\net6.0\Solo_Practice_CSharp.pdb
+C:\basicCsharp\Solo_Practice_CSharp\obj\Debug\net6.0\Solo_Practice_CSharp.csproj.AssemblyReference.cache
+C:\basicCsharp\Solo_Practice_CSharp\obj\Debug\net6.0\Solo_Practice_CSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\basicCsharp\Solo_Practice_CSharp\obj\Debug\net6.0\Solo_Practice_CSharp.AssemblyInfoInputs.cache
+C:\basicCsharp\Solo_Practice_CSharp\obj\Debug\net6.0\Solo_Practice_CSharp.AssemblyInfo.cs
+C:\basicCsharp\Solo_Practice_CSharp\obj\Debug\net6.0\Solo_Practice_CSharp.csproj.CoreCompileInputs.cache
+C:\basicCsharp\Solo_Practice_CSharp\obj\Debug\net6.0\Solo_Practice_CSharp.dll
+C:\basicCsharp\Solo_Practice_CSharp\obj\Debug\net6.0\refint\Solo_Practice_CSharp.dll
+C:\basicCsharp\Solo_Practice_CSharp\obj\Debug\net6.0\Solo_Practice_CSharp.pdb
+C:\basicCsharp\Solo_Practice_CSharp\obj\Debug\net6.0\Solo_Practice_CSharp.genruntimeconfig.cache
+C:\basicCsharp\Solo_Practice_CSharp\obj\Debug\net6.0\ref\Solo_Practice_CSharp.dll

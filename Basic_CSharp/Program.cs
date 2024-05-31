@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.Linq.Expressions;
+using System.Threading.Channels;
 
 namespace Basic_CSharp
 {
@@ -7,31 +8,52 @@ namespace Basic_CSharp
 
     class Program
     {
-        //재귀 함수
-        static int Factorial(int n)
+        enum ClassType
         {
-            if (n <= 1)
-            {
-                return 1;
-            }
-            return n * Factorial(n - 1);
+            None = 0,
+            Knight = 1,
+            Archer = 2,
+            Mage = 3
         }
 
-        //static int Factorial(int n)
-        //{
-        //    int result = 1;
-        //    for (int i = 1; i <= n; i++)
-        //    {
-        //        result *= i;
-        //    }
-        //    return result;
-        //}
+        static ClassType ChooseClass ()
+        {
+            Console.WriteLine("직업을 선택하세요!");
+            Console.WriteLine("[1] 기사");
+            Console.WriteLine("[2] 궁수");
+            Console.WriteLine("[3] 법사");
 
+            ClassType choice = ClassType.None;
+            string input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "1":
+                    choice = ClassType.Knight;
+                    break;
+
+                case "2":
+                    choice = ClassType.Archer;
+                    break;
+
+                case "3":
+                    choice = ClassType.Mage;
+                    break;
+            }
+
+            return choice;
+        }
         static void Main(string[] args)
         {
-            // 5! = 5 * (4!)
-            int ret = Factorial(5);
-            Console.WriteLine(ret);
+            ClassType choice = ClassType.None;
+
+            while (true)
+            {
+                choice = ChooseClass();
+
+                if (choice != ClassType.None)
+                    break;
+            }
         }
     }
 }
