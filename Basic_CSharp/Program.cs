@@ -4,20 +4,35 @@
 namespace Basic_CSharp
 {
 
-    // 오버로딩 : 함수 이름의 재사용
 
     class Program
     {
+        //재귀 함수
+        static int Factorial(int n)
+        {
+            if (n <= 1)
+            {
+                return 1;
+            }
+            return n * Factorial(n - 1);
+        }
+
+        //static int Factorial(int n)
+        //{
+        //    int result = 1;
+        //    for (int i = 1; i <= n; i++)
+        //    {
+        //        result *= i;
+        //    }
+        //    return result;
+        //}
 
         static void Main(string[] args)
         {
-            for (int i = 2; i < 10; i++)
-            {
-                for (int j = 1; j < 10; j++)
-                {
-                    Console.WriteLine($"{i} * {j} = {i * j}");
-                }
-            }
+            // 5! = 5 * (4!)
+            int ret = Factorial(5);
+            Console.WriteLine(ret);
         }
     }
 }
+
