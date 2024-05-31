@@ -3,42 +3,42 @@
 
 namespace Basic_CSharp
 {
+
+    // 오버로딩 : 함수 이름의 재사용
+
     class Program
     {
-        static void Divide(int a, int b, out int result1, out int result2)
+
+        static int Add(int a, int b)
         {
-            result1 = a / b;
-            result2 = a % b;
+            Console.WriteLine("Add int 호출");
+            return a + b;
         }
-        //static void Swap(ref int a, ref int b)          // 인자 값 서로 바꾸기
-        //{
-        //    int temp = 0;
-        //    temp = a;
-        //    a = b;
-        //    b = temp;
-        //}
 
-
-        //static void AddOne(ref int number)          // 원본 값 참조해서 값 더하기
+        //static int Add(int a, int b, int c)
         //{
-        //    number = number + 1;
-        //}
+        //    Console.WriteLine("Add int 인자 3개 호출");
+        //    return a + b + c;
+        //}                 
+        static int Add(int a, int b, int c = 0, float d = 1.0f, double e = 3.0)                 // 선택적 매게변수 || 받는 외부에서 인자가 2개를 받아도되고, 3개를 받아도됨 
+        {
+            Console.WriteLine("Add int 인자 3개 호출");
+            return a + b + c;
+        }
 
-        //static int AddOne2(int number)              // 원본 값 복사해서 반환하기
-        //{
-        //    return number + 1;
-        //}
+        static float Add(float a, float b)
+        {
+            Console.WriteLine("Add float 호출");
+            return a + b;
+        }
 
 
         static void Main(string[] args)
         {
-            int num1 = 10;
-            int num2 = 3;
-
-            int result1;
-            int result2;
-            Divide(10, 3, out result1, out result2);
-            Console.WriteLine($"{result1} {result2}");
+            int ret = Program.Add(2, 3);
+            int ret2 = Program.Add(3, 4, d:2.0f);
+            float ret3 = Program.Add(2.0f, 3.0f);
+            //Console.WriteLine(ret);
         }
     }
 }
