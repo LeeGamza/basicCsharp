@@ -1,59 +1,48 @@
 ﻿using System;
 using System.Linq.Expressions;
 using System.Threading.Channels;
+using System.Xml.Serialization;
 
 namespace Basic_CSharp
 {
 
+    // 객체 (OOP Object Oriented Programming)
 
-    class Program
+    // Knight
+    // 속성 : hp, atk, pos(위치)
+    // 기능 : Move, Attack, Die
+
+    class Knight
     {
-        enum ClassType
+        public int hp;
+        public int attack;
+
+        public void Move()
         {
-            None = 0,
-            Knight = 1,
-            Archer = 2,
-            Mage = 3
+            Console.WriteLine("Knight Move");
         }
-
-        static ClassType ChooseClass ()
+        
+        public void Attack()
         {
-            Console.WriteLine("직업을 선택하세요!");
-            Console.WriteLine("[1] 기사");
-            Console.WriteLine("[2] 궁수");
-            Console.WriteLine("[3] 법사");
-
-            ClassType choice = ClassType.None;
-            string input = Console.ReadLine();
-
-            switch (input)
-            {
-                case "1":
-                    choice = ClassType.Knight;
-                    break;
-
-                case "2":
-                    choice = ClassType.Archer;
-                    break;
-
-                case "3":
-                    choice = ClassType.Mage;
-                    break;
-            }
-
-            return choice;
+            Console.WriteLine("Knight Attack");
         }
+    }
+    
+    
+    
+    class Program
+    { 
+        
+
         static void Main(string[] args)
         {
-            ClassType choice = ClassType.None;
+            Knight knight = new Knight();
 
-            while (true)
-            {
-                choice = ChooseClass();
+            knight.hp = 100;
+            knight.attack = 10;
 
-                if (choice != ClassType.None)
-                    break;
-            }
+            knight.Move();
+            knight.Attack();
         }
     }
 }
