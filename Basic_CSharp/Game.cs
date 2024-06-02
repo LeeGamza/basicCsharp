@@ -149,6 +149,7 @@ namespace Basic_CSharp
                 if(player.IsDead())
                 {
                     Console.WriteLine("패배했습니다.");
+                    mode = GameMode.Lobby;
                     break;
                 }
             }
