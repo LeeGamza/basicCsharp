@@ -129,7 +129,7 @@ namespace Solo_Practice_CSharp
                 if (monster.IsDead())
                 {
                     Console.WriteLine("축하합니다 승리하셨습니다!");
-                    Console.WriteLine($"현재 남은 플레이어 체력 {player.GetHp}");
+                    Console.WriteLine($"현재 남은 플레이어 체력 {player.GetHp()}");
                     mode = GameMode.Town;
                     break;
                 }
