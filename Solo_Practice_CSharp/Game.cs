@@ -30,6 +30,7 @@ namespace Solo_Practice_CSharp
                     ProcessTown();
                     break;
                 case GameMode.Field:
+                    ProcessField();
                     break;
             }
         }
@@ -120,12 +121,43 @@ namespace Solo_Practice_CSharp
 
         private void ProcessFight()
         {
-            // 자고 나서 구현합시다잉
+            while (true)
+            {
+                int damage = player.Attack();
+                Console.WriteLine("플레이어의 공격");
+                monster.OnDamaged(damage);
+                if (monster.IsDead())
+                {
+                    Console.WriteLine("축하합니다 승리하셨습니다!");
+                    Console.WriteLine($"현재 남은 플레이어 체력 {player.GetHp}");
+                    mode = GameMode.Town;
+                    break;
+                }
+                damage = monster.Attack();
+                Console.WriteLine("몬스터의 공격");
+                player.OnDamaged(damage);
+                if (player.IsDead())
+                {
+                    Console.WriteLine("패배하셨습니다!");
+                    mode = GameMode.Lobby;
+                    break;
+                }
+            }
         }
 
         private void TryToEscape()
         {
-            // 자고 나서 구현합시다잉
+            int randValue = rand.Next(0, 101);
+            if (randValue <= 33)
+            {
+                Console.WriteLine("도망에 성공하셨습니다!");
+                mode = GameMode.Town;
+            }
+            else
+            {
+                Console.WriteLine("도망에 실패하셨습니다!");
+                ProcessFight();
+            }
         }
     }
 }

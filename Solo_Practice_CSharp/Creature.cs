@@ -37,13 +37,11 @@ namespace Solo_Practice_CSharp
         
         public bool IsDead() { return hp <= 0; }
 
-        public void Attack(int damage)
+        public int Attack() { return atk; }
+
+        public void OnDamaged(int damage)
         {
             hp -= damage;
-        }
-
-        public void OnDamaged()
-        {
             if (hp <= 0)
             {
                 hp = 0;
