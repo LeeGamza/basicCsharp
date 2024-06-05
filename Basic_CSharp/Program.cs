@@ -5,41 +5,46 @@ using Microsoft.Win32.SafeHandles;
 
 namespace Basic_CSharp
 {
-    
     class Program
     {
-        static int GetHighestScore(int[] scores)
+        abstract class Monster      // 추상클래스
         {
-
-            int score = scores.Max();
-            return score;
+            public abstract void Shout(); // 추상함수
         }
 
-        static int GetAverageScore(int[] scores)
+        interface IFlayable         // 나의 기능을 갖고 있는 아이라면 반드시 Fly 함수를 제공해야한다
         {
-            return (int)scores.Average();
+            void Fly();
         }
 
-        static int GetIndexOf(int[] scores, int value)
+        class Orc : Monster
         {
-            return Array.IndexOf(scores, value);
+            public override void Shout()    // 추상클래스안에있는 추상함수를 반드시 사용하라 라고 강요함
+            {
+                Console.WriteLine("록타르 오가르!");
+            }
         }
 
-        static void Sort(int[] scores)
+        class FlableOrc : Orc, IFlayable      // C#에서는 다중상속 안됨!
         {
-            Array.Sort(scores);
-            
+            public void Fly()
+            {
+                
+            }
         }
+
+        class Skeleton : Monster
+        {
+            public override void Shout()
+            {
+                Console.WriteLine("꾸에에에엑");
+            }
+        }
+        
         static void Main(string[] args)
         {
-            // 배열
+            // 추상클래스와 Interface
             
-            int[] scores = new int[5] { 10, 30, 40, 20, 50 };
-            Console.WriteLine($"Max : {GetHighestScore(scores)}");
-            Console.WriteLine($"Avr : {GetAverageScore(scores)}");
-            Console.WriteLine($"GetIndexOf : scores의 {GetIndexOf(scores, 100)}번째 인덱스 ** -1값은 잘못된 값을 넣을 시 반환됩니다. **");
-            Sort(scores);
-            Console.WriteLine($"Sort : {String.Join(", ", scores)}");
         }
     }
 }
