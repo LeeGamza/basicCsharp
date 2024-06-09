@@ -1,0 +1,15 @@
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\bin\Debug\net7.0\Delegate_Practice2.exe
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\bin\Debug\net7.0\Delegate_Practice2.deps.json
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\bin\Debug\net7.0\Delegate_Practice2.runtimeconfig.json
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\bin\Debug\net7.0\Delegate_Practice2.dll
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\bin\Debug\net7.0\Delegate_Practice2.pdb
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\obj\Debug\net7.0\Delegate_Practice2.csproj.AssemblyReference.cache
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\obj\Debug\net7.0\Delegate_Practice2.GeneratedMSBuildEditorConfig.editorconfig
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\obj\Debug\net7.0\Delegate_Practice2.AssemblyInfoInputs.cache
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\obj\Debug\net7.0\Delegate_Practice2.AssemblyInfo.cs
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\obj\Debug\net7.0\Delegate_Practice2.csproj.CoreCompileInputs.cache
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\obj\Debug\net7.0\Delegate_Practice2.dll
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\obj\Debug\net7.0\refint\Delegate_Practice2.dll
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\obj\Debug\net7.0\Delegate_Practice2.pdb
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\obj\Debug\net7.0\Delegate_Practice2.genruntimeconfig.cache
+C:\basicCsharp\Delegate_Practice2\Delegate_Practice2\obj\Debug\net7.0\ref\Delegate_Practice2.dll
