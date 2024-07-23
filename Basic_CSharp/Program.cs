@@ -5,23 +5,16 @@ using Microsoft.Win32.SafeHandles;
 
 namespace Basic_CSharp
 {
-    // Observer Pattern
+    class Item
+    {
+        
+    }
     class Program
     {
-        static void OnInputTest()
-        {
-            Console.WriteLine("Input Received!");
-        }
+        
         static void Main(string[] args)
         {
-            InputManager inputManager = new InputManager();
-
-            inputManager.InputKey += OnInputTest;
-            
-            while (true)
-            {
-                inputManager.Update();
-            }
+            // Lambda : 일회용 함수를 만드는데 사용하는 문법이다.   
         }
     }
 }
