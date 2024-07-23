@@ -5,9 +5,9 @@ public class Order
     
     // 이걸 프로퍼티로도 바꾸자 나중에
     
-    private string _name;
-    private int _count;
-    private int _price;
+    private string _name { get; }
+    private int _count { get; }
+    private int _price { get; }
 
     public Order(string name, int count, int price)
     {

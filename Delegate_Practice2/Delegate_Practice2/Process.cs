@@ -1,11 +1,14 @@
-﻿namespace Delegate_Practice2;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Delegate_Practice2;
 
 public class Process
 {
-    public delegate void orderDele();
-    
     
     private List<Order> orderList = new List<Order>();
+    
     public void AddOrder()      // 장바구니 담기
     {
         while (true)
@@ -14,11 +17,12 @@ public class Process
             Console.WriteLine("[1] 샴푸");
             Console.WriteLine("[2] 세재");
             Console.WriteLine("[3] 치약");
-            Console.WriteLine("[4] 장바구니 확인하기");
-            Console.WriteLine("[5] 상품 주문하기");
-        
+            Console.WriteLine("[4] 장바구니 담고 나가기");
             int input = int.Parse(Console.ReadLine());
 
+            if (input == 4)
+                break;
+            
             switch (input)
             {
                 
@@ -30,40 +34,30 @@ public class Process
                     break;
                 case 3:
                     orderList.Add(new Order("치약", 1, 1500));
-                    
-                    break;
-                case 4:
-                    foreach (Order basket in orderList)
-                        basket.OrderInfo();
-                    break;
-                case 5:
-                    
                     break;
                 default:
                     break;
             }
-        }
-        
-        
-
-        // 신성한 빌드 중에 아빠가 난입
-        // 머릿속으로 구현방법 떠올림
-        // 리스트에 제너릭써서 Order클래스 속성들을 들고와서 리스트에 담자
-        
-        // 이후 작업
-        // AddOrder에 반복문 써서 충분히 담았으면 담기종료만들기
+        } 
     }
     
-    public void ViewOrders()    // 장바구니 내역보기
+    public void ViewOrders()    
     {
-        // Order 클래스의 OrderInfo를 담으면 될듯
+        foreach (Order basket in orderList)
+            basket.OrderInfo();
     }
     
-    public void CalculateTotal()    // 장바구니 담긴 물건 전체가격
+    public void CalculateTotal()    
     {
-        
+        // 문제자체가 잘못됏다.
+        // 이 당시나는 LINQ를 쓸줄 모른다. 하지만 LINQ가 필요한 문제를 GPT가 냈다.
+        // GPT가 내준 메서드명으로만 꾸며볼려했다. 하지만 할 수없는 구조이다.
+        // 그렇다면 이걸 푸는방법은 2가지다
+        // GetTotalPrice라는 메서드를 Order.cs에 만들거나
+        // Order클래스의 필드를 private => public으로 바꿔야한다.
+        // 그럼 대체 왜 델리케이트를 쓰는거지
+        // 델리케이트는 의존성을 낮출려고 하고, 은닉성을 키울려고하는건데
+        // 클래스의 속성을 public으로 할꺼면 쓸 이유조차도 없어지게된다.
+        // 따라서 calculateTotal은 풀지않겠다.
     }
 }
-
-// 간단한 사칙연산 델리
-// 굳이??
